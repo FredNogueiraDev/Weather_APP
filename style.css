@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --linear-bg: linear-gradient(to right, rgb(100, 65, 165), rgb(42, 8, 69));
+  --linear-bg2: linear-gradient(to right, #b2b2e3, #348ac7);
+
+  --blue: #348ac7;
+  --blue-hover: #1e679a;
+
+  --black: #000000d0;
+
+  --font: "Poppins", "sans-serif";
+}
+
+* {
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: var(--linear-bg);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 120%;
+}
+
+.infoLeft {
+  background: var(--linear-bg2);
+  color: white;
+  padding: 2em;
+  border-radius: 30px;
+  width: 12em;
+
+  min-height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+.infoRight {
+  background: var(--black);
+  color: white;
+  padding: 2em;
+  border-radius: 0 30px 30px 0;
+  width: 15em;
+  max-width: 420px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: var(--blue);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  justify-content: center;
+}
+
+button:hover {
+  background: var(--blue-hover);
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: var(--blue);
+  color: white;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+input.search-bar::placeholder {
+  color: white;
+}
+
+.cardTitle h1 {
+  font-size: 35px;
+  margin: 0;
+}
+
+.yearDate p {
+    padding-right:1% ;
+}
+
+.cardTitle p {
+  font-size: 14px;
+  margin: .3em 0;
+}
+
+.location img {
+  height: 1em;
+  margin-top: 2px;
+}
+
+.city{
+    padding-left: .5em;
+}
+
+.cardDegrees .dayDegrees {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.cardDegrees p {
+  margin: 0;
+}
+
+.icon {
+  height: 3em;
+  width: 3em;
+}
+
+.forecastInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.forecastInfo .title {
+  font-weight: bold;
+}
+
+.forecastInfo p {
+  margin: 0.4em;
+}
+
+.temperatureVariation {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cardDays {
+  background: var(--blue);
+  height: 4em;
+  width: 8em;
+  border-radius: 10px;
+  margin: 2%;
+  margin-bottom: 1em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardDays p {
+  margin: 0;
+}
+.cardDays .title {
+  font-weight: bold;
+}
+
+.temperatureVariation .todayInfo {
+  background: var(--blue);
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Carregando...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
+} 
+
+footer {
+  height: auto;
+  padding: 1em 0;
+  width: 100%;
+  justify-content: center;
+  background: var(--black);
+  color: #fff;
+  text-align: center;
+  flex-direction: flex-end;
+}
